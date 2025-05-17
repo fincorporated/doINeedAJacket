@@ -1,0 +1,12 @@
+#container {
+    background-color: bisque;
+    text-align: center;
+}
+
+.result {
+    margin-top: 15px;
+}
+
+.result h2 {
+    display: inline;
+}
