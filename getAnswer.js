@@ -88,16 +88,12 @@ async function getWeather() {
     const link = await getAPI();
     const response = await fetch(link);
     const weather = await response.json();
-    alert(JSON.stringify(weather.current));
     const data = weather.current;
-    alert(data.temperature_2m);
     const temperature = data.temperature_2m;
     const weatherCode = data.weather_code;
     const condition = conditions.get(weatherCode);
-    alert(condition);
     document.getElementById("temperature").innerHTML = temperature;
     document.getElementById("condition").innerHTML = condition;
-    alert(document.getElementById("condit").value);
     const tempInput = document.getElementById("temp");
     const conditInput = document.getElementById("condit");
     tempInput.value = temperature;
@@ -129,7 +125,6 @@ async function getAnswer() {
         subjTemp = Number(temp);
     }
 
-    alert(subjTemp)
     let answer;
     if (subjTemp > 68 && userCondition.includes("rain") == false) {
         answer = "nope!"
