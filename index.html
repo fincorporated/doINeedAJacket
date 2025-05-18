@@ -10,7 +10,7 @@
         <div id="container">
             <h1>Do I Need A Jacket?</h1>
             <div class="personalTemp">
-                <h2>Step 1: Do you typically run warm or cold?</h2>
+                <h2>Do you typically run warm or cold?</h2>
                 <form>
                     <input type="radio" id="warm" name="tempRun">
                     <label for="warm">Warm</label>
@@ -20,19 +20,23 @@
                     <label for="neither">Not sure/Neither</label>
                 </form>
             </div>
-            <div class="location">
-                <h2>Step 2: What's the Weather Where You Are?</h2>
-                <input id="temp" placeholder="Temperature">
-                <input id="condit" placeholder="Condition">
-                <button id="submit">Submit Weather</button>
-                <h2>Or enter city name</h2>
-                <input id="city">
-                <button id="locate">Locate Me</button>
-                <button id="fetch">Fetch</button>
-                <p id="cityURL"></p>
-                <p id="test"></p>
+            <div class="weather">
+                <div class="enterLocation">
+                    <h2>Enter your location</h2>
+                    <input id="city" placeholder="city">
+                    <input id="state" placeholder="state">
+                    <button id="fetch">Fetch</button>
+                </div>
+                <div class="enterWeather">
+                    <h2>Or <br />Enter the current weather conditions</h2>
+                    <input id="temp" placeholder="Temperature">
+                    <input id="condit" placeholder="Condition">
+                    <button id="submit">Submit Weather</button>
+                </div>
             </div>
             <div class="result">
+                <p id="temperature"></p>
+                <p id="condition"></p>
                 <h2>Answer:</h2>
                 <h2 id="answer"></h2>
             </div>
