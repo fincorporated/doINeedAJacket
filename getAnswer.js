@@ -1,7 +1,5 @@
-document.getElementById("submit").addEventListener("click", getAnswer);
 document.getElementById("fetch").addEventListener("click", getWeather);
-// document.getElementById("test").addEventListener("click", getCondition);
-
+document.getElementById("submit").addEventListener("click", getAnswer);
 
 const url = new URL ("https://geocoding-api.open-meteo.com/v1/search?name=&count=5&language=en&format=json&countryCode=US");
 const params = new URLSearchParams(url.search);
@@ -92,12 +90,11 @@ async function getWeather() {
     const temperature = data.temperature_2m;
     const weatherCode = data.weather_code;
     const condition = conditions.get(weatherCode);
-    document.getElementById("temperature").innerHTML = temperature;
-    document.getElementById("condition").innerHTML = condition;
     const tempInput = document.getElementById("temp");
     const conditInput = document.getElementById("condit");
     tempInput.value = temperature;
     conditInput.value = condition;
+    getAnswer();
     return [temperature, condition];
 }
 

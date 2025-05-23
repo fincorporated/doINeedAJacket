@@ -1,7 +1,72 @@
-#container {
-    background-color: bisque;
-    text-align: center;
+body {
+    background-color: #C1D7CB;
 }
+
+#container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    background-color: #3A9278;
+    font-size: 36px;
+    color: #0F0114;
+    width: fit-content;
+    padding: 0.5em;
+    margin: 1em auto 0;
+    border-radius: 5px;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #254441;
+    font-size: 28px;
+}
+
+p, label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: #0F0114;
+    font-size: 16px;
+}
+
+button {
+    background-color: #43AA8B;
+    color: #C1D7CB;
+    border-color: #0F0114;
+    padding: 0 1em;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #50B99A;
+    color: white;
+}
+
+input[type=text] {
+    background-color: #C1D7CB;
+    border-color: #43AA8B;
+    border-style: solid;
+    
+}
+
+input:focus {
+    border: 2px solid #3A9278;
+    outline: none;
+}
+
+input[type="radio"]:checked {
+    border: 5px solid #254441;
+    outline: 2px solid #43AA8B;
+}
+
 
 .result {
     margin-top: 15px;
@@ -10,3 +75,5 @@
 .result h2 {
     display: inline;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
