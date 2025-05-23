@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2em;
+    gap: 5px;
 }
 
 h1 {
@@ -27,6 +27,13 @@ h2 {
     font-weight: 600;
     color: #254441;
     font-size: 28px;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #254441;
+    font-size: 22px;
 }
 
 p, label {
@@ -69,11 +76,7 @@ input[type="radio"]:checked {
 
 
 .result {
-    margin-top: 15px;
-}
-
-.result h2 {
-    display: inline;
+    margin: 0px auto;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');

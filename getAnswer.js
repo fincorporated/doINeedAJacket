@@ -123,14 +123,20 @@ async function getAnswer() {
     }
 
     let answer;
-    if (subjTemp > 68 && userCondition.includes("rain") == false) {
-        answer = "nope!"
-    } else if (subjTemp > 55) {
-        answer = "yeah, something light"
-    } else if (subjTemp > 45) {
-        answer = "for sure"
+    if (subjTemp > 85 && userCondition.includes("rain") == false) {
+        answer = "Ditch the sleeves entirely if you can!"
+    } else if (subjTemp > 74 && userCondition.includes("rain") == false) {
+        answer = "Definitely short."
+    } else if (subjTemp >= 64 && userCondition.includes("rain") == false) {
+        answer = "For flexibility, go with a light layer over short sleeves. If you hate a layer, probably long sleeves, but not too heavy."
+    } else if (subjTemp > 57) {
+        answer = "Long. Me personally? I'm going for a hoodie, but a sweater is good too if that's your vibe, layered over short sleeves. You could also probably get away with mid weight long sleeves."
+    } else if (subjTemp > 48) {
+        answer = "This is very early fall vibes. It's the transitional jacket's time to shine, layered over long sleeves. Alternatively, flannel over a hoodie; thick sweater over long sleeves; or your lightest winter coat if you have nothing else."
+    } else if (subjTemp > 38) {
+        answer = "Multiple layers of mid-heavy weight long sleeves. Think long sleeve + light coat; sweater + jacket; thick long sleeve + sweater/sweatshirt;"
     } else {
-        answer = "jacket? try coat and hat"
+        answer = "At this point you're putting a coat on. If it's more of a jacket- go extra on the layers, but if you've pulled out a true coat, you can wear whatever you like under there."
     }
     document.getElementById("answer").innerText = answer;
 }
